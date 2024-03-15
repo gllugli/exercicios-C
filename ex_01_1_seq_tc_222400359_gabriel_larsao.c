@@ -1,6 +1,18 @@
-/* 1. Elabore um programa que leia dois valores reais e mostre o resultado da adição desses valores. */
+
+
+// BIBLIOTECAS USADAS
 
 #include <stdio.h>
+#include <math.h>
+#define pi 3.141516 
+
+
+
+
+
+
+
+/* 1. Elabore um programa que leia dois valores reais e mostre o resultado da adição desses valores. */
 
 int main() {
 
@@ -19,6 +31,7 @@ int main() {
 
 a. No final do programa, acrescente a subtração dos valores lidos e mostre o resultado. 
 b. No final do programa, acrescente a multiplicação dos valores lidos e mostre o resultado.
+
 */
 
 
@@ -112,10 +125,10 @@ int main() {
 
     float raio, area;
 
-    printf("Qual o raio do circulo?");
+    printf("Qual o raio do circulo? \n");
     scanf("%f", &raio);
 
-    area = 3.14 * raio ^ 2;
+    area = pi * pow(raio, 2);
 
     printf("A área do circulo é igual a: %.2f", area);
 
@@ -127,7 +140,7 @@ int main() {
 int main() {
 
     float raio = 5;
-    float comprimento = 2 * 3.14 * raio;
+    float comprimento = 2 * pi * raio;
 
     printf("O comprimento da circunferência é igual a: %.2f", comprimento);
 
@@ -142,7 +155,7 @@ int main() {
     float raio = 5;
     float altura = 10;
 
-    area = 2 * 3.14 * raio * altura;
+    area = 2 * pi * raio * altura;
 
     printf("A área lateral do cilindro é igual a: %.2f", area);
 
@@ -155,16 +168,19 @@ int main() {
 
     float volume, raio;
 
+    printf("Qual o raio da esfera? \n");
     scanf("%f", &raio);
 
-    volume = 4 / 3 * 3.14 * raio ^ 3;
+    volume = 4.0 / 3.0 * pi * pow(raio, 3.0);
 
     printf("O volume da esfera é igual a: %.2f", volume);
 
     return 0;
 }
 
-/* 10. Construa um programa para calcular a raiz de uma equação do 1º grau. Os coeficientes “a” e “b” são fornecidos pelo usuário. 
+/* 
+
+10. Construa um programa para calcular a raiz de uma equação do 1º grau. Os coeficientes “a” e “b” são fornecidos pelo usuário. 
 
 Calcule a raiz sem fazer crítica.   
 
@@ -174,7 +190,20 @@ Equação: a x + b = 0,  onde: raiz = - b/a
 
 int main() {
 
-    float a, b;
+    // Equação de Primeiro Grau: ax + b = c
+
+    float a, b, x;
+    float c = 5;
+
+    printf("Digite o valor de A: \n");
+    scanf("%f", &a);
+
+    printf("Digite o valor de B: \n");
+    scanf("%f", &b);
+
+    x = (c - b) / a;
+
+    printf("O resultado desta equação de 1º grau é igual a: %.2f", x);
 
     return 0;
 }
@@ -183,6 +212,20 @@ int main() {
 /* 11. Elabore um programa que troque o conteúdo de duas variáveis. O usuário fornecerá os dois valores inteiros. */
 
 int main() {
+
+    int a, b, auxiliar;
+
+    printf("Digite o valor de A: \n");
+    scanf("%d", &a);
+
+    printf("Digite o valor de B: \n");
+    scanf("%d", &b);
+ 
+    auxiliar = a;
+    a = b;
+    b = auxiliar;
+
+    printf("Valor de A: %d \n Valor de B: %d \n", a, b);
 
     return 0;
 }
